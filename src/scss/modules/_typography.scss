@@ -1,0 +1,7 @@
+@use 'mixins';
+@use 'variables';
+
+.section-title {
+  @include mixins.header-2;
+  color: variables.$color-light-xl;
+}

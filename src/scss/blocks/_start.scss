@@ -1,0 +1,47 @@
+@use '../modules/variables';
+@use '../modules/mixins';
+
+.start {
+  min-height: 908px;
+  background: url("../assets/img/bg.png"), variables.$gradient-start-block;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 180px;
+  }
+
+  .text-content {
+    padding-top: 165px;
+    max-width: 460px;
+    @include mixins.paragraph-l;
+    color: variables.$color-dark-s;
+    margin-bottom: 42px;
+    &__title {
+      margin-bottom: 42px;
+    }
+
+    &__text {
+      margin-bottom: 41px;
+      width: 460px;
+    }
+
+    &__btn {
+      display: block;
+      @include mixins.btn-primary;
+      text-align: center;
+      line-height: 52px;
+      color: variables.$color-dark-3xl;
+    }
+
+    &__img {
+      width: 58%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,45 @@
+@use 'modules/reset';
+@use 'modules/fonts';
+@use 'modules/variables';
+@use 'modules/typography';
+@use 'UI/buttons';
+@use 'blocks/header';
+@use 'blocks/start';
+
+body {
+  position: relative;
+  background-color: variables.$background-light-theme;
+  font-family: 'Georgia', Arial, sans-serif;
+}
+
+.container {
+  max-width: 1220px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  transform: scale(1);
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

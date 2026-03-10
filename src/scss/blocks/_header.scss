@@ -1,0 +1,70 @@
+@use '../modules/mixins';
+@use '../modules/variables';
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  padding: 60px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.logo {
+  display: block;
+  flex-shrink: 0;
+  height: 60px;
+  width: 186px;
+
+  &__title {
+    margin-bottom: 10px;
+    @include mixins.logo-title;
+  }
+
+  &__subtitle {
+    @include mixins.logo-subtitle;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 443px;
+  width: 100%;
+  &__item {
+
+  }
+
+  &__link {
+    @include mixins.link-dark-mode;
+    color: variables.$color-dark-s;
+    height: 100%;
+    display: block;
+    &--active {
+      color: variables.$color-light-s;
+      &::after {
+        @include mixins.link-active-underline;
+      }
+    }
+  }
+
+}

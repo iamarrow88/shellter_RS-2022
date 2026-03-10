@@ -1,0 +1,204 @@
+@use 'variables';
+
+@mixin btn-primary {
+  width: 207px;
+  height: 52px;
+  background-color: variables.$color-primary;
+  border-radius: 100px;
+  color: variables.$color-dark-3xl;
+  font-family: 'Georgia', serif;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  transition: 0.7s all;
+  &:hover {
+    background-color: variables.$color-primary-light;
+    transform: scale(1.05);
+  }
+}
+@mixin btn-light {
+  width: 207px;
+  height: 52px;
+  border-radius: 100px;
+  color: variables.$color-dark-3xl;
+  border: 2px solid variables.$color-primary;
+  font-size: 17px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.06em;
+  transition: 0.7s all;
+  &:hover {
+    background-color: variables.$color-primary-light;
+    transform: scale(1.05);
+  }
+}
+@mixin arrow-btn-active {
+  width: 52px;
+  height: 52px;
+  border: 2px solid variables.$color-primary;
+  border-radius: 100px;
+  color: variables.$color-dark-3xl;
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: variables.$color-primary-light;
+    transition: 0.7s all;
+  }
+}
+@mixin arrow-btn-inactive {
+  width: 52px;
+  height: 52px;
+  border: 2px solid variables.$color-dark-s;
+  color: variables.$color-dark-s;
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin arrow-btn-selected {
+  width: 52px;
+  height: 52px;
+  border: 2px solid variables.$color-primary;
+  border-radius: 100px;
+  background-color: variables.$color-primary;
+  color: variables.$color-dark-3xl;
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  transition: 0.7s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -----------------  HEADERS & TEXTS  --------------- */
+@mixin header-2 {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: variables.$color-dark-l;
+}
+@mixin header-3 {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: variables.$color-dark-l;
+  text-align: center;
+}
+@mixin header-4 {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: variables.$color-dark-l;
+  text-align: center;
+}
+@mixin header-5 {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: variables.$color-dark-l;
+  text-align: center;
+}
+@mixin paragraph-l {
+  font-family: 'Arial', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: variables.$color-dark-xl;
+}
+@mixin paragraph-s {
+  font-family: 'Arial', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: variables.$color-dark-m;
+}
+@mixin logo-title {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: variables.$color-primary;
+}
+@mixin logo-subtitle {
+  font-family: 'Arial', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: variables.$color-light-xl;
+}
+@mixin h3-mobile {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+/* -----------------  LINKS ---------------------- */
+
+@mixin link-dark-mode {
+  position: relative;
+  font-family: 'Arial', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: variables.$color-light-l;
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+  }
+  &:visited {
+    color: variables.$color-light-l;
+  }
+}
+
+@mixin link-active-underline {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: variables.$color-primary;
+  content: '';
+  transition: 0.7s all;
+}
+/* -----------------    modal window ---------------------- */
+
+@mixin modal-window {
+  max-width: calc( 100% - 52px );
+  max-height: calc( 100% - 52px );
+  padding-right: 20px;
+  background-color: variables.$color-light-s;
+  border: 1px solid variables.$color-light-s;
+  border-radius: 10px;
+}
