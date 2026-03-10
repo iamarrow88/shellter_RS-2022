@@ -1,0 +1,23 @@
+@mixin font-face($font-name, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: "#{$font-name}";
+    src:
+            url('../../assets/fonts/#{$font-name}.eot')
+            format('embedded-opentype'),
+            url('../../assets/fonts/#{$font-name}.woff')
+            format('woff'),
+            url('../../assets/fonts/#{$font-name}.ttf')
+            format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+  }
+}
+
+// Подключаем конкретные шрифты (замени на свои названия)
+@include font-face('Georgia', 400, normal);
+@include font-face('Georgia-Bold', 700, normal);
+@include font-face('Georgia-BoldItalic', 700, italic);
+@include font-face('Inter-Regular', 400, normal);
+@include font-face('Arial-Regular', 400, normal);
+@include font-face('Arial-Italic', 400, italic);
